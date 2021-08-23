@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Commit from "./Commit";
+import './index.css'
+import Commits from "./Commits";
+
+const commits = [
+    
+  {
+    id: "1",
+    repo: "Project1",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  },
+  {
+    id: "2",
+    repo: "Project2",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  },
+  {
+    id: "3",
+    repo: "Project3",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  },
+  {
+    id: "4",
+    repo: "Project4",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  },
+  {
+    id: "5",
+    repo: "Project5",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  },
+  {
+    id: "6",
+    repo: "Project6",
+    numOfCommits: 4,
+    date: new Date(2020, 7, 16)
+  }
+]
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="commits">
+      <Commits commits={commits} />
     </div>
   );
 }
